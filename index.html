@@ -1,11 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="./css/style.css" type="text/css">
+        <link rel="icon" href="./imgs/p1.jpg" type="img/jpg">
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="./js/jquery-3.5.1.js"></script>
+        <script src="./js/scripts.js"></script>
+        <title>Mimi's Pizzeria </title> 
+    </head>
+    <body>
+        <div class="main container">
+            <div class="header">
+                <p class="noshery text-white text-bold text-center ">Mimi's Pizzeria</p>
+            </div>
+            <div class="menu">
+                <h3 class="menu text-center">Menu :</h3>
+                <button type="submit" name="button" id="deli"> Click here to see menu </button><br><br>
+                <div class="row" id="mimi"> 
+                    <div class="col-md-4">
+                        <div>
+                            <img class="card-img-top" src="./imgs/dessert.jpg">
+                        </div>
+                        <div class="overlay">
+                            <h5 class="text-bold">Dessert Pizza</h5>
+                        </div> 
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <img class="card-img-top" src="./imgs/neopolitan.jpg">
+                        </div>
+                        <div class="overlay">
+                            <h5 class="text-bold">Neapolitan Pizza</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <img class="card-img-top" src="./imgs/background.jpeg">
+                        </div>
+                        <div class="overlay">
+                            <h5 class="text-bold">Saint Louis Pizza</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" > 
+                    <div class="col-md-4">
+                        <div> 
+                            <img class="card-img-top" src="./imgs/p1.jpg">
+                        </div>
+                        <div class="overlay">
+                            <h5 class="text-bold">stuffed Pizza</h5>
+                        </div> 
+                    </div>
+                    <div class="col-md-4">
+                        <div> 
+                            <img class="card-img-top" src="./imgs/p4.jpeg">
+                        </div>
+                        <div class="overlay">
+                            <h5 class="text-bold">Crispy Pizza</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <img class="card-img-top" src="./imgs/p8.jpeg">
+                        </div>
+                        <div class="overlay">
+                            <h5 class="text-bold">Glutten free Pizza</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="jumbotron">
+               <div class="row order">
+                   <div class="col-md-6">
+                       <div class="col-md-8">
+                        <h3>Enter your order details below <br> </h3>
+                        <form id="order-info">
+                            <label>Choose your pizza size</label>
+                            <select class="form-control" name="size" id="size">
+                                <option value="7">Large $7 </option>
+                                <option value="5">Medium $5 </option>
+                                <option value="4">Small $4 </option>
+                            </select>
+                            <br>
+                            <label>Choose your desired crust type</label>
+                            <select class="form-control" name="" id="crust">
+                            <option value="1" name="crust">stuffed crust $1
+                            <option value="1" name="crust">Crispy $1
+                            <option value="2" name="crust">Glutten free $2
+                            </select> 
+                            <br>
+                            <label>Choose your Desired toppings ($1/each)</label> <br>
+                            <input value="1" type="checkbox" id="mush">Mushrooms
+                            <input value="1" type="checkbox" id="onion">Onions
+                            <br> <br>
+                            <label for="">Input Quantity</label>
+                            <input class="form-control form-group" type="text" id="numberofpizza">
+                            <button name="button" type="submit" id="submit" value="Check-Out"
+                                onclick="calctotalPrice()">Checkout</button>
+                                <form onsubmit="return clearInput()">
+                                    <input class="clear" type="submit" value="Clear input">
+                                </form>
+                        </form>
+                       </div>
+                   </div>
+                   <div class="col-md-6">
+                       <div class="col-md-8">
+                        <button type="submit" name="button" id="delivery">Click for delivery</button>
+
+                            <div id="deliveryForm">
+                                <h3>Enter delivery info:</h3>
+                                <form id="delivery-info">
+                                    <label for="name">Name</label>
+                                    <input class="form-control" type="text" name="" id="name" required="required">
+                                    <label for="location">Location</label>
+                                    <input class="form-control" type="text" id="location" placeholder="Ex: Kanombe">
+                                    <label for="phonenumber">Phone Number</label>
+                                    <input class="form-control" type="tel" placeholder="07......" id="number"> <br>
+                                    <button type="submit" name="button" id="submit">Make delivery</button>
+                                    <button type="submit" name="button" id="cancel">Cancel delivery</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+           </div> 
+            <footer class="text-center">
+                <p><i class="fa fa-map-marker fa-2x">&nbsp;Down town </i></p>
+                <p><i class="fa fa-phone">&nbsp;0784609710</i></p>
+                <p><i class="fa fa-email">&nbsp;MimisPizzeria@gmail.com</i></p>
+            </footer>
+        </div>
+    </body>
 </html>
