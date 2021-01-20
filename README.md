@@ -15,8 +15,8 @@ In this website, you order different sizes of pizzas with one or more toppings a
 * Javascript
 * JQuery
 ## Live link
- https://mireille1999.github.io/DelaniIp3/.
+ https://mireille1999.github.io/MimisPizzeria/
 ## Support and contact details
  If you run into any issues or have questions, please feel free to contact me on my email mireille1999@gmail.com
 ### License
-Copyright (c) 2020 **Mireille Muhawenimana**
+Copyright (c) 2021 **Mireille Muhawenimana**
